@@ -11,7 +11,7 @@ var score = 0;
 
 function preload() {
 
-  getTime();
+  //getTime();
 
 polygon_img = loadImage("polygon.png");
 //sound = loadSound("Sound.mp3");
@@ -81,8 +81,8 @@ var options = {
 
 
 function draw() {
-if (backgroundImg)
-   background(backgroundImg);  
+//if (backgroundImg)
+   background("black");  
   
  
 
@@ -164,22 +164,22 @@ function keyPressed() {
 }
 
 
-async function getTime() {
-  var response = await fetch("http://worldtimeapi.org/api/timezone/America/Los_Angeles");
-  var responseJSON = await response.json();
+//async function getTime() {
+ // var response = await fetch("http://worldtimeapi.org/api/timezone/America/Los_Angeles");
+  //var responseJSON = await response.json();
   
-  var datetime = responseJSON.datetime;
-  var hour = datetime.slice(11,13);
-  console.log(hour);
+ // var datetime = responseJSON.datetime;
+  //var hour = datetime.slice(11,13);
+  //console.log(hour);
 
-  if(hour >= 6 && hour <= 18) {
-    bg = "Day.jpg"
-  } else {
-    bg = "Night.jpg"
-  }
+  //if(hour >= 6 && hour <= 18) {
+  //  bg = "Day.jpg"
+  //} else {
+ //   bg = "Night.jpg"
+ // }
 
-backgroundImg = loadImage(bg);
-console.log(backgroundImg);
+//backgroundImg = loadImage(bg);
+////console.log(backgroundImg);
 
 
-}
+//}
